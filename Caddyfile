@@ -1,9 +1,0 @@
-# Caddy mengurus sertifikat HTTPS otomatis untuk API_DOMAIN.
-{$API_DOMAIN} {
-	reverse_proxy backend:8000 {
-		# Biarkan klien mengakses file besar tanpa batas waktu baca singkat.
-		transport http {
-			read_timeout 10m
-		}
-	}
-}
